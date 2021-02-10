@@ -15,7 +15,7 @@ public final class MorseCode {
     private static final List<String> lettersList = Arrays.asList(letters.clone());
 
 
-    private static String findMorseLetter(String letter) {
+    static String findMorseLetter(String letter) {
         String morseLetter;
         if (!lettersList.contains(letter.toUpperCase())) {
             morseLetter = " ";
@@ -23,7 +23,7 @@ public final class MorseCode {
         return morseLetter;
     }
 
-    private static String findLetter(String morseLetter) {
+    static String findLetter(String morseLetter) {
         String letter;
         if (!morseList.contains(morseLetter)) {
             letter = "";
@@ -41,7 +41,7 @@ public final class MorseCode {
             sb.append(findMorseLetter(ch)).append(" ");
             i++;
         }
-        return sb.toString();
+        return sb.toString().strip();
     }
 
     public static String translateToLetters(String morse) {
