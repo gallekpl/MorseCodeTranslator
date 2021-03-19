@@ -29,6 +29,7 @@ public class Test {
     public void testTranslateToMorse() {
         assertEquals(MorseCode.translateToMorse("i dont like bananas"), "..   -.. --- -. -   .-.. .. -.- .   -... .- -. .- -. .- ...");
         assertEquals(MorseCode.translateToMorse("good morning"), "--. --- --- -..   -- --- .-. -. .. -. --.");
+        assertEquals(MorseCode.translateToMorse("+-/?!@();:'\".,"), ".-.-. -....- -..-. ..--.. -.-.-- .--.-. -.--. -.--.- -.-.-. ---... .----. .-..-. .-.-.- --..--");
     }
 
     @org.junit.jupiter.api.Test
